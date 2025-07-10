@@ -12,3 +12,16 @@ Get the largest number in a list
         4.3.1. Stop the loop
 5. Display the maximum value in the console
 """
+from random import randint
+lst = [randint(1, 100000) for item in range(20)]
+print(lst)
+
+maximum = lst[0]
+for item in range(1, len(lst)):
+    if lst[item] > maximum:
+        maximum = lst[item]
+
+    else:
+        continue
+
+print(maximum)
