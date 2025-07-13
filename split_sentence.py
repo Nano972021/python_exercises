@@ -6,9 +6,6 @@ Ver. 1.0
 3. The function returns the lst of words in the sentence
 ---------------------------------------------------------------------
 Function Instructions:
-1. Check weather the first character in the sentence is a space or not
-    1.1. If the first character is a space
-    
 1. Create a new variable 'start', and initialize it with 0; it will represent the loop start value
 2. Create a variable 'lst', and initialize it as an empty list []; it will hold the sentence's words
 3. Loop over the sentence, as long as 'start' is less that the sentence's length:
@@ -35,3 +32,4 @@ Test Data
 4. " "
             
 """
+
