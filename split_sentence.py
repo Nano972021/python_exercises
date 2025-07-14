@@ -30,29 +30,29 @@ Test Data
 2. " I have a car"
 3. "I  have a   car"
 4. " "
-            
+---------------------------------------------------------------------         
 """
-start = 0
-lst = []
-word = "" # Change No.01
-sentence = input("Enter a sentence: ")
-while start < len(sentence):
-    
-    if sentence[start] == " ":
+def split_sentence(sentence):
+    start = 0
+    lst = []
+    word = ""
+    sentence = input("Enter a sentence: ")
+    while start < len(sentence):
         
-        if word == "":
+        if sentence[start] == " ":
+            
+            if word == "":
+                start += 1
+                continue
+
+            lst.append(word)
+            word = ""
             start += 1
-            continue
 
-        # Change No.3
-        lst.append(word)
-        word = ""
-        start += 1
+        else:
+            word += sentence[start]
+            start += 1
 
-    else:
-        word += sentence[start]
-        start += 1
+    lst.append(word)
 
-lst.append(word) # Change No.2
-
-print(lst)
+    return(lst)
