@@ -21,9 +21,9 @@ Function Instructions:
     4.2. If sentence[start] is not an empty space:
         4.2.1. Add sentence[start] to 'word'
         4.2.2. Increase the 'start' variable by 1
-    4.3. If 'start' equals sentence's length - 1:
-        4.3.1. Add the value of 'word' to 'lst'
-5. Return lst
+5. If 'start' equals sentence's length - 1:
+    5.1. Add the value of 'word' to 'lst'
+6. Return lst
 ---------------------------------------------------------------------
 Test Data
 1. "I have a car"
@@ -44,18 +44,15 @@ while start < len(sentence):
             start += 1
             continue
 
-        else:
-            lst.append(word) # When we reach the last word, the loop is already finished by then and we can't append the last word to the list
-            word = ""
-            start += 1
+        # Change No.3
+        lst.append(word)
+        word = ""
+        start += 1
 
     else:
         word += sentence[start]
-        print(word)
         start += 1
 
-
-    if start == len(sentence) - 1:
-        lst.append(word)
+lst.append(word) # Change No.2
 
 print(lst)
