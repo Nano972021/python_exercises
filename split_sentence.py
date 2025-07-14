@@ -36,7 +36,6 @@ def split_sentence(sentence):
     start = 0
     lst = []
     word = ""
-    sentence = input("Enter a sentence: ")
     while start < len(sentence):
         
         if sentence[start] == " ":
